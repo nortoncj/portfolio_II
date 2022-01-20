@@ -1,38 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Orbitron&family=Source+Sans+Pro&display=swap");
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-app-color: #850a80;
+  --secondary-app-color: #800f0e;
+  --third-app-color: #791332;
+  --standout-color: #f6f792;
+  --standout-color-2: #ea2e49;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  padding: 0px;
+  margin: 0px;
+  /* background: rgb(42, 1, 56);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 1, 56, 1) 0%,
+    rgba(42, 25, 42, 1) 50%,
+    rgba(46, 1, 54, 1) 100%
+  ); */
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+body {
+  background: rgb(214, 28, 28);
+  background: linear-gradient(
+    263deg,
+    rgba(214, 28, 28, 1) 0%,
+    rgba(200, 90, 17, 1) 63%,
+    rgba(238, 233, 28, 1) 100%
+  );
+}
+html {
+}
+.avi {
+  width: 300px;
+  border-radius: 50;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+}
+.fas {
+  padding: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero {
+  background: linear-gradient(
+    -90deg,
+    var(--primary-app-color),
+    var(--secondary-app-color)
+  );
+  clip-path: polygon(100% 0, 100% 75%, 50% 100%, 50% 100%, 0 75%, 0% 0%);
+}
+.hero-2 {
+  padding-top: 60px;
+}
+.intro-section {
+  /* padding-top: 20; */
+  text-align: center;
+}
+.I-am {
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+.name {
+  color: var(--standout-color);
+  font-size: 56;
+}
+.intro-adj {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.4rem;
+}
+.intro-subheading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+}
+.brand {
+  animation: flicker2 1.5s infinite alternate;
+  color: fffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  opacity: 1;
+}
+.brand::after {
+  content: "";
+  width: 150%;
+  -webkit-box-shadow: -35px 0px 60px 8px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -35px 0px 60px 8px rgba(255, 255, 255, 1);
+  box-shadow: -35px 0px 60px 8px rgba(255, 255, 255, 1);
+}
+.px-10 {
+  paddint-inline: 90px;
+}
+.btn-hire {
+  font-size: 1.3rem;
+  font-family: "Orbitron", sans-serif;
+  background: transparent;
+  border-radius: 25px;
+  margin-inline: 12px;
+  padding: 5px 40px;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  animation: flicker 1.5s infinite alternate;
+}
+.btn-hire:hover {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  background-color: var(--third-app-color);
+  transform: translateY(-5px);
+}
+.btn-cv {
+  font-size: 1.3rem;
+  font-family: "Source Sans Pro", monospace;
+  background: transparent;
+  border-radius: 25px;
+  margin-inline: 12px;
+  padding: 5px 40px;
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
+  background: var(--third-app-color);
+  transition: all 0.3s ease-in-out;
+}
+#down {
+  text-decoration: none;
+  margin-right: 5px;
+}
+.btn-cv:hover {
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  transform: translateY(-5px);
+}
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px rgb(212, 250, 237);
   }
-  to {
-    transform: rotate(360deg);
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
   }
+}
+
+@keyframes flicker2 {
+  0% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-menu {
+  cursor: pointer;
+  color: fffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
+}
+.nav-menu:hover {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+.about-me-text {
+  font-family: "orbitron";
+  color: white;
+  font-weight: 800;
+  font-size: 3.5rem;
+  font-style: oblique;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.about-me-pannel {
+  background: radial-gradient(circle at bottom, navy 0, black 100%);
+  border-radius: 2%;
+}
+.about-me-section {
+  font-family: "Source Sans Pro";
+  width: 70%;
+  margin-inline: auto;
+}
+.quote {
+  font-family: "orbitron";
+  font-weight: 600;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  text-align: justify;
+}
+.about-txt {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  text-align: justify;
+}
+.highlights {
+  font-family: "orbitron";
+  font-weight: 600;
+  font-size: 3.5rem;
+  text-align: justify;
+  font-style: oblique;
+  padding-top: 20px;
+}
+.skills {
+  font-family: "Dongle";
+  font-weight: 600;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  text-align: justify;
+  font-style: oblique;
 }
