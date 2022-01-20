@@ -2,10 +2,20 @@ import avi from "./img/Watermark.png";
 import "./styles.css";
 import "../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import Education from "./Education";
+import Work from "./Work";
+import Code from "./Code";
+import Projects from "./Projects";
 
 function App() {
+  const [education, seteducation] = useState(false);
+  const [work, setwork] = useState(false);
+  const [code, setcode] = useState(false);
+  const [projects, setprojects] = useState(true);
+
   return (
-    <html>
+    <>
       <div className="hero px-10 py-5">
         <nav className="d-flex flex-row justify-content-between">
           <span className="brand mx-5">KRVTZ</span>
@@ -93,10 +103,45 @@ function App() {
 
       <div className="resume-section d-flex flex-column">
         <span className="about-me-text">Resume</span>
-        <div className="col-lg-4 col-md-4"></div>
-        <div className="col-lg-8 col-md-8"></div>
+
+        <div className="resume-section row">
+          <div
+            className="col-lg-4 col-md-4 resume-left d-flex flex-row px-0 shadow-lg"
+            style={{ width: "20%", marginInline: "auto", height: "400px" }}
+          >
+            <div className="d-flex flex-column bg-new text-white">
+              <div className="d-flex flex-column">
+                <span class="resume-icon">
+                  <i class="fab fa-github-alt"></i>
+                </span>
+                <span class="resume-icon">
+                  <i class="fas fa-cog"></i>
+                </span>
+                <span class="resume-icon">
+                  <i class="fas fa-code"></i>
+                </span>
+                <span class="resume-icon">
+                  <i class="fas fa-user-tie"></i>
+                </span>
+              </div>
+            </div>
+            <div className="d-flex flex-column">
+              <span className="resume-menu">Projects</span>
+              <span className="resume-menu">Work</span>
+              <span className="resume-menu">Code</span>
+              <span className="resume-menu">Education</span>
+            </div>
+          </div>
+
+          <div className="col-lg-8 col-md-8 col-sm-12 resume-right">
+            {education === true && <Education />}
+            {work === true && <Work />}
+            {code === true && <Code />}
+            {projects === true && <Projects />}
+          </div>
+        </div>
       </div>
-    </html>
+    </>
   );
 }
 
