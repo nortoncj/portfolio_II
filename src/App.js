@@ -14,6 +14,19 @@ function App() {
   const [code, setcode] = useState(false);
   const [projects, setprojects] = useState(true);
 
+  function setAllFalse() {
+    setcode(false);
+    seteducation(false);
+    setwork(false);
+    setprojects(false);
+  }
+
+  function changeState(function1, state1) {
+    setAllFalse();
+    // document.getElementById("resume-menu").className = "selected";
+    function1(state1);
+  }
+
   return (
     <>
       <div className="hero px-10 py-5">
@@ -23,7 +36,7 @@ function App() {
             <span className="mx-4 nav-menu">Home</span>
             <span className="mx-4 nav-menu">About Me</span>
             <span className="mx-4 nav-menu">Resume</span>
-            <span className="mx-4 nav-menu">Testimonial</span>
+            <span className="mx-4 nav-menu">Testimonials</span>
             <span className="mx-4 nav-menu">Contact</span>
           </div>
         </nav>
@@ -35,7 +48,7 @@ function App() {
               </span>
               <span className="intro-adj py-2">Industrious Dev</span>
               <span className="intro-subheading">
-                Specialized in front end and back end applications
+                Specialized in front end development
               </span>
               <div className="d-flex flex-row justify-content-center mt-5">
                 <button className="btn-hire">Hire Me</button>
@@ -83,42 +96,50 @@ function App() {
                 multiple web applications for various clients.
                 <br />I have developed a deep love for learing about development
                 in both hardware and software. A more detailed look at my
-                experices can be seen in my <span>resume</span>
+                experiences can be seen in my <span>resume</span>
               </span>
               <span className="highlights">Skills</span>
-              <span className="skills">
-                <ul>
-                  <li>JavaScript (ES6+), Node, React</li>
-                  <li>Java</li>
-                  <li>C#, ASP</li>
-                  <li>PHP</li>
-                  <li>Python, DJango</li>
-                  <li>MongoDB, MYSQL</li>
-                </ul>
-              </span>
+              <div className="skills row">
+                <div className=" col-sm-4">
+                  <ul>
+                    <li>JS ES6+, Node, React</li>
+                    <li>PHP</li>
+                    <li>MongoDB, MYSQL</li>
+                    <li>Git</li>
+                  </ul>
+                </div>
+                <div className="col-sm-4">
+                  <ul>
+                    <li>Bootstrap,Sass,Flexbox</li>
+                    <li>(light) C#, .NET</li>
+                    <li>(light) Python, Django</li>
+                    <li>(light) Java</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="resume-section d-flex flex-column">
+      <div className="resume-section-outer d-flex flex-column">
         <span className="about-me-text">Resume</span>
 
-        <div className="resume-section row">
-          <div
-            className="col-lg-4 col-md-4 resume-left d-flex flex-row px-0 shadow-lg"
-            style={{ width: "20%", marginInline: "auto", height: "400px" }}
-          >
+        <div
+          className="resume-section row"
+          style={{ width: "70%", marginInline: "auto", height: "400px" }}
+        >
+          <div className="col-lg-4 col-md-4 resume-left d-flex flex-row px-0 shadow-lg">
             <div className="d-flex flex-column bg-new text-white">
-              <div className="d-flex flex-column">
+              <div className="d-flex flex-column resume-icons">
                 <span class="resume-icon">
                   <i class="fab fa-github-alt"></i>
                 </span>
                 <span class="resume-icon">
-                  <i class="fas fa-cog"></i>
+                  <i class="fas fa-code"></i>
                 </span>
                 <span class="resume-icon">
-                  <i class="fas fa-code"></i>
+                  <i class="fas fa-briefcase"></i>
                 </span>
                 <span class="resume-icon">
                   <i class="fas fa-user-tie"></i>
@@ -126,14 +147,50 @@ function App() {
               </div>
             </div>
             <div className="d-flex flex-column">
-              <span className="resume-menu">Projects</span>
-              <span className="resume-menu">Work</span>
-              <span className="resume-menu">Code</span>
-              <span className="resume-menu">Education</span>
+              <span
+                className={
+                  projects === false ? "resume-menu" : "resume-menu selected"
+                }
+                onClick={() => {
+                  changeState(setprojects, true);
+                }}
+              >
+                Projects
+              </span>
+              <span
+                className={
+                  code === false ? "resume-menu" : "resume-menu selected"
+                }
+                onClick={() => {
+                  changeState(setcode, true);
+                }}
+              >
+                Code
+              </span>
+              <span
+                className={
+                  work === false ? "resume-menu" : "resume-menu selected"
+                }
+                onClick={() => {
+                  changeState(setwork, true);
+                }}
+              >
+                Work
+              </span>
+              <span
+                className={
+                  education === false ? "resume-menu" : "resume-menu selected"
+                }
+                onClick={() => {
+                  changeState(seteducation, true);
+                }}
+              >
+                Education
+              </span>
             </div>
           </div>
 
-          <div className="col-lg-8 col-md-8 col-sm-12 resume-right">
+          <div className="col-lg-8 col-md-8 col-sm-12 resume-right shadow-lg">
             {education === true && <Education />}
             {work === true && <Work />}
             {code === true && <Code />}

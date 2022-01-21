@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Orbitron&family=Source+Sans+Pro&display=swap");
+.category {
+  justify-content: auto;
+}
+
+.skill {
+  list-style-type: none;
+}
+li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: auto;
+}
+
+.code-badge {
+  height: 25%;
+  width: 25%;
+  padding-right: 5px;
+}

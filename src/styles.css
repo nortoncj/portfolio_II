@@ -30,8 +30,7 @@ body {
     rgba(238, 233, 28, 1) 100%
   );
 }
-html {
-}
+
 .avi {
   width: 300px;
   border-radius: 50;
@@ -42,7 +41,18 @@ html {
 .fas {
   padding: 2px;
 }
-
+/* NAV */
+.nav-menu {
+  cursor: pointer;
+  color: fffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
+}
+.nav-menu:hover {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
 .hero {
   background: linear-gradient(
     -90deg,
@@ -90,7 +100,7 @@ html {
   box-shadow: -35px 0px 60px 8px rgba(255, 255, 255, 1);
 }
 .px-10 {
-  paddint-inline: 90px;
+  padding-inline: 90px;
 }
 .btn-hire {
   font-size: 1.3rem;
@@ -131,6 +141,7 @@ html {
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   transform: translateY(-5px);
 }
+/* Animations */
 /* Flickering animation */
 @keyframes flicker {
   0%,
@@ -196,17 +207,7 @@ html {
   }
 }
 
-.nav-menu {
-  cursor: pointer;
-  color: fffff;
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.3rem;
-}
-.nav-menu:hover {
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
-    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
-}
+/* About Section */
 .about-me-text {
   font-family: "orbitron";
   color: white;
@@ -231,6 +232,8 @@ html {
   font-size: 1.2rem;
   opacity: 0.8;
   text-align: justify;
+  padding-bottom: 40px;
+  padding-left: 40px;
 }
 .about-txt {
   font-family: "Source Sans Pro";
@@ -254,4 +257,69 @@ html {
   opacity: 0.8;
   text-align: justify;
   font-style: oblique;
+}
+/* Resume Styles */
+.resume-icon {
+  margin-block: 24px;
+  margin-inline: 24px;
+  font-size: 2em;
+}
+.resume-icons {
+  background: linear-gradient(
+    -90deg,
+    var(--third-app-color),
+    var(--primary-app-color)
+  );
+}
+.resume-menu {
+  font-size: 2em;
+  width: 1%;
+  transition: all 0.3s ease-in-out;
+  padding-block: 24px;
+  padding-inline: 24px;
+  color: black;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-family: "Source Sans Pro";
+}
+.resume-menu:hover {
+  width: 100%;
+  background: linear-gradient(
+    -90deg,
+    var(--standout-color-2),
+    var(--third-app-color)
+  );
+}
+.selected {
+  background: linear-gradient(
+    -45deg,
+    var(--standout-color-2),
+    var(--third-app-color)
+  );
+  width: 100%;
+  color: white;
+}
+.resume-left {
+  background: linear-gradient(
+    -90deg,
+    var(--third-app-color),
+    var(--primary-app-color)
+  );
+}
+.resume-right {
+  background: linear-gradient(
+    -45deg,
+    var(--standout-color-2),
+    var(--third-app-color)
+  );
+  color: black;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: "Source Sans Pro";
+  margin-top: 42px;
+}
+.resume-section-outer {
+  /* clip-path: polygon(0 8%, 100% 0, 100% 10%, 0 200%); */
+  background: radial-gradient(circle at bottom, navy 0, black 100%);
 }
