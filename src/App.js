@@ -1,6 +1,7 @@
 import avi from "./img/Watermark.png";
 import "./styles.css";
 import "../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import Education from "./Education";
