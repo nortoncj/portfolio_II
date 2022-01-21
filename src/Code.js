@@ -1,18 +1,7 @@
 import React from "react";
 import "./code.css";
-require.context("./img/", false, /\.(png)$/);
-
-function importAll(r) {
-  let img = {};
-  r.keys().forEach((item, index) => {
-    img[item.replace("./", "")] = r(item);
-  });
-  return img;
-}
 
 export default function Code() {
-  const images = importAll(require.context("./img/", false, /\.(jpg)$/));
-
   return (
     <>
       <div className="d-flex d-row ">

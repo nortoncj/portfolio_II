@@ -2,8 +2,11 @@ import avi from "./img/Watermark.png";
 import "./styles.css";
 import "../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css";
 import "../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js";
+import "./css/themify-icons.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 import { useState } from "react";
+import { gsap } from "gsap";
 import Education from "./Education";
 import Work from "./Work";
 import Code from "./Code";
@@ -54,7 +57,7 @@ function App() {
               <div className="d-flex flex-row justify-content-center mt-5">
                 <button className="btn-hire">Hire Me</button>
                 <button className="btn-cv">
-                  <i class="fal fa-arrow-down" id="down"></i> CV
+                  <i class="ti-download" id="down"></i> CV
                 </button>
               </div>
             </div>
@@ -68,7 +71,6 @@ function App() {
         <br />
         <br />
       </div>
-
       <div className="about-me-section aboutme my-5">
         <div className="d-flex flex-column">
           <span className="about-me-text"> About Me </span>
@@ -122,10 +124,8 @@ function App() {
           </div>
         </div>
       </div>
-
       <div className="resume-section-outer d-flex flex-column">
         <span className="about-me-text">Resume</span>
-
         <div
           className="resume-section row"
           style={{ width: "70%", marginInline: "auto", height: "400px" }}
@@ -134,16 +134,16 @@ function App() {
             <div className="d-flex flex-column bg-new text-white">
               <div className="d-flex flex-column resume-icons">
                 <span class="resume-icon">
-                  <i class="fab fa-github-alt"></i>
+                  <i class="ti-github"></i>
                 </span>
                 <span class="resume-icon">
-                  <i class="fas fa-code"></i>
+                  <i class="ti-view-list"></i>
                 </span>
                 <span class="resume-icon">
-                  <i class="fas fa-briefcase"></i>
+                  <i class="ti-blackboard"></i>
                 </span>
                 <span class="resume-icon">
-                  <i class="fas fa-user-tie"></i>
+                  <i class="ti-user"></i>
                 </span>
               </div>
             </div>

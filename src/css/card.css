@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Orbitron&family=Source+Sans+Pro&display=swap");
+img {
+  width: 20rem;
+  height: 20rem;
+}
+a {
+  text-decoration: none;
+}
+.card-container {
+  width: 300px;
+  /* margin: 0 1rem 10px 1rem; */
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: rgb(120, 119, 119);
+  background: linear-gradient(
+    347deg,
+    rgba(120, 119, 119, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(118, 111, 111, 1) 85%
+  );
+  transition: all ease-in-out 3ms;
+  z-index: 1;
+  transform-origin: center;
+  border-radius: 5px;
+}
+.image-container {
+  overflow: hidden;
+  height: 300px;
+}
+.card-title {
+  font-style: oblique;
+  font-family: "orbitron";
+  font-size: 2rem;
+  text-align: center;
+}
+.card-body {
+  color: #1c1c1c;
+  background: rgb(159, 159, 159);
+  background: linear-gradient(
+    347deg,
+    rgba(159, 159, 159, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(163, 163, 163, 1) 85%
+  );
+}
+
+.card-container:hover {
+  filter: contrast(80%);
+  transform: scale(1.1);
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #d3e0de,
+    0 0 82px #d3e0de, 0 0 92px #d3e0de, 0 0 102px #d3e0de, 0 0 151px #d3e0de;
+}

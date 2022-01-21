@@ -40,25 +40,6 @@ export default function Work() {
           </span>
         </div>
       </div>
-      <div className="work-new">
-        <div className=" d-flex flex-column">
-          <span className="company">CVS</span>
-          <span className="years">2016-2019</span>
-        </div>
-        <div className="d-flex flex-column">
-          <span className="position">Pharm Tech</span>
-          <span className="desc">
-            <div>
-              <ul>
-                <li>
-                  Provided great customer service in a high pressure environment
-                </li>
-                <li>Kept inventory and handled sensitive documents</li>
-              </ul>
-            </div>
-          </span>
-        </div>
-      </div>
     </>
   );
 }
