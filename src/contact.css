@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Orbitron&family=Source+Sans+Pro&display=swap");
+
+/*
+  Form
+*/
+
+.form {
+  background: radial-gradient(circle at bottom, navy 0, #9e258f 100%);
+  width: 80%;
+  box-shadow: 10px 10px 63px 4px salmon;
+  height: 500px;
+  margin-inline: auto;
+  border-radius: 25px;
+  & > div {
+    & ~ div {
+      margin-top: 20px;
+    }
+    &.is-hidden {
+      display: none;
+    }
+  }
+  &-label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  &-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font: 0.875rem/1.5 "Source Sans Pro";
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+.form-label {
+  font-family: "Source Sans Pro";
+  color: whitesmoke;
+}
+
+/*
+  Contact Form
+*/
+
+.contact-form {
+  width: 100%;
+  max-width: 568px;
+  padding: 40px;
+  background-color: #fefefe;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+
+  &--loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &--errors {
+  }
+  &--sent {
+    & > div ~ div {
+      margin: 0;
+    }
+  }
+}
+
+/*
+  Button
+*/
+
+.button {
+  font-size: 0.875rem;
+  font-family: "Source Sans Pro", monospace;
+  margin: 20px;
+  background: transparent;
+  border-radius: 20px;
+  margin-inline: 12px;
+  padding: 5px 10px;
+  border: 1px solid white;
+  transition: 0.3s ease-in-out;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+.button:hover {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  transform: translateY(-5px);
+}

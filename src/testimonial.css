@@ -1,0 +1,26 @@
+.testimonial-card {
+  padding: 24px;
+  width: 98%;
+  color: #1c1c1c;
+  background: rgb(159, 159, 159);
+  background: linear-gradient(
+    347deg,
+    rgba(159, 159, 159, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(163, 163, 163, 1) 85%
+  );
+  border-radius: 50px 20px 50px 0px;
+}
+
+.description,
+.testimonial-name {
+  color: #1c1c1c;
+  font-family: "orbitron";
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.testimonial-name {
+  font-size: 1.3rem;
+  text-align: right;
+  font-style: oblique;
+}

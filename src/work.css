@@ -3,6 +3,7 @@
   font-family: "orbitron";
   font-size: 1.5rem;
   font-weight: 800;
+  color: whitesmoke;
 }
 .position {
   font-size: 1rem;
@@ -15,4 +16,8 @@
   font-size: 1rem;
   padding: 10px 10px;
   text-decoration: none;
+  color: whitesmoke;
+}
+.desc {
+  color: whitesmoke;
 }

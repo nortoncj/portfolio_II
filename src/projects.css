@@ -1,69 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dongle&family=Orbitron&family=Source+Sans+Pro&display=swap");
 .app {
   justify-content: center;
+  color: whitesmoke;
 }
 .card-wrapper {
   background-color: none;
 }
-
-/* Carousel */
-.menu {
-  overflow: hidden;
-  cursor: grab;
-  width: 20%;
-  position: relative;
-  z-index: 1;
-  height: 50%;
-  
-  &.is-dragging {
-    cursor: grabbing;
-  }
-  
-  &--wrapper {
-    counter-reset: count;
-    display: flex;
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 20rem;
-  }
-  
-  &--item {
-    counter-increment: count;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0 0.5rem;
-    overflow: hidden;
-    
-    @media (max-width: 767px) {
-      // width: 20vw;
-      // height: 20vw;
-    }
-    
-    &:nth-child(n+10):before {
-      content: counter(count);
-    }
-
-    figure {
-      position: absolute;
-      z-index: 1;
-      display: block;
-      user-select: none;
-      -webkit-appearance: none;
-      padding: 0;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      cursor: pointer;
-      width: 20rem;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-      transform-origin: center;
-    }

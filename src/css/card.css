@@ -5,6 +5,7 @@ img {
 }
 a {
   text-decoration: none;
+  color: whitesmoke;
 }
 .card-container {
   width: 300px;
@@ -32,6 +33,7 @@ a {
   font-family: "orbitron";
   font-size: 2rem;
   text-align: center;
+  color: whitesmoke;
 }
 .card-body {
   color: #1c1c1c;

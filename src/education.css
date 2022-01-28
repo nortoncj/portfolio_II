@@ -3,6 +3,7 @@
   font-family: "orbitron";
   font-size: 1.4rem;
   font-weight: 800;
+  color: whitesmoke;
 }
 .degree {
   font-size: 1rem;
@@ -13,4 +14,5 @@
 .year {
   font-size: 1rem;
   padding: 10px 10px;
+  color: whitesmoke;
 }
