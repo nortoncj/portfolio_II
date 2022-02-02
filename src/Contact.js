@@ -1,19 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 export default function Contact() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [message, setmessage] = useState("");
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_dtvncdq",
+        "template_nm6gkqs",
+        form.current,
+        "user_w6rlx1Bt4stlf7oqlcKGQ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
-    <form class="form contact-form" action="norton0077@live.com" method="POST">
+    <form className="form contact-form" ref={form} onSubmit={sendEmail}>
       <div>
-        <label class="form-label" for="name">
+        <label className="form-label" for="name" name="user_name">
           Name
         </label>
         <input
-          class="form-control"
+          className="form-control"
           id="name"
           name="name"
           type="text"
@@ -25,11 +46,11 @@ export default function Contact() {
         />
       </div>
       <div>
-        <label class="form-label" for="email">
+        <label className="form-label" for="email">
           Email
         </label>
         <input
-          class="form-control"
+          className="form-control"
           id="email"
           name="email"
           type="email"
@@ -41,11 +62,11 @@ export default function Contact() {
         />
       </div>
       <div>
-        <label class="form-label" for="subject">
+        <label className="form-label" for="subject">
           Subject
         </label>
         <input
-          class="form-control"
+          className="form-control"
           id="subject"
           name="subject"
           type="subject"
@@ -53,11 +74,11 @@ export default function Contact() {
         />
       </div>
       <div>
-        <label class="form-label" for="message">
+        <label className="form-label" for="message">
           Message
         </label>
         <textarea
-          class="form-control"
+          className="form-control"
           id="message"
           name="message"
           value={message}
@@ -68,11 +89,8 @@ export default function Contact() {
         ></textarea>
       </div>
       <div>
-        <button class="button" type="submit">
+        <button className="button" type="submit" value="Send">
           Submit
-        </button>
-        <button class="button" type="reset">
-          Clear
         </button>
       </div>
     </form>

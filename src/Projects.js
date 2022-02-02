@@ -130,7 +130,7 @@ export default function Projects() {
             <div class="menu--item col ">
               <figure>
                 <Card
-                  link="#"
+                  link="http://nurseryofkickz.com/"
                   title=" Nursery of Kickz"
                   imageurl={require("./img/nursery.jpg")}
                   body="E-commerce Website build with PHP, MYSQL and Bootstrap. It allows the user to make purchase using sessions ran through the PayPal API."
@@ -149,28 +149,6 @@ export default function Projects() {
               </figure>
             </div>
           </div>
-          <div className="row">
-            <div class="menu--item col">
-              <figure>
-                <Card
-                  link="#"
-                  title="One Shop"
-                  imageurl={require("./img/oneshop.jpg")}
-                  body="E-commerce Management platform built by a team with PHP, Node JS, JQuery and MYSQL."
-                ></Card>
-              </figure>
-            </div>
-            <div class="menu--item col">
-              <figure>
-                <Card
-                  link="#"
-                  title="U.W.S"
-                  imageurl={require("./img/uws.jpg")}
-                  body="Doctor's office website built for alternative healing. I created a database and did frontend work. "
-                ></Card>
-              </figure>
-            </div>
-          </div>
         </div>
       </div>
     </>
@@ -178,7 +156,7 @@ export default function Projects() {
     // <div className="app">
     //   <div id="album-rotator-holder">
     //     <Card
-    //       link="#"
+    //       link="nurseryofkickz.com"
     //       title=" Nursery of Kickz"
     //       imageurl={require("./img/nursery.jpg")}
     //       body="E-commerce Website build with PHP, MYSQL and Bootstrap. It allows the user to make purchase using sessions ran through the PayPal API."

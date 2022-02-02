@@ -5,7 +5,8 @@ import "../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js";
 import "./css/themify-icons.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
-import { useState } from "react";
+import Typed from "typed.js";
+import { useEffect, useRef, useState } from "react";
 import Education from "./Education";
 import Work from "./Work";
 import Code from "./Code";
@@ -19,6 +20,32 @@ function App() {
   const [code, setcode] = useState(false);
   const [projects, setprojects] = useState(true);
   const [opennav, setopennav] = useState(false);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        "Industrious Dev",
+        "Full Stack Developer",
+        "PHP Developer",
+        "React Developer",
+        ".NET Developer",
+      ],
+      startDelay: 0,
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 100,
+      smartBackspace: true,
+      loop: true,
+      showCursor: false,
+      autoInsertCss: true,
+      cursorChar: "_",
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+  const el = useRef(null);
 
   function setAllFalse() {
     setcode(false);
@@ -53,10 +80,18 @@ function App() {
             <span className="brand mx-5">Chris Norton</span>
             <div className="d-flex flex-rows nav-web">
               <span className="mx-4 nav-menu">Home</span>
-              <span className="mx-4 nav-menu">About Me</span>
-              <span className="mx-4 nav-menu">Resume</span>
-              <span className="mx-4 nav-menu">Testimonials</span>
-              <span className="mx-4 nav-menu">Contact</span>
+              <a className="mx-4 nav-menu" href="#aboutme">
+                About Me
+              </a>
+              <a className="mx-4 nav-menu" href="#resume">
+                Resume
+              </a>
+              <a className="mx-4 nav-menu" href="#testimonials">
+                Testimonials
+              </a>
+              <a className="mx-4 nav-menu" href="#contactme">
+                Contact
+              </a>
             </div>
           </nav>
           <div className="hero-2 row justify content-center">
@@ -65,15 +100,27 @@ function App() {
                 <span className="I-am">
                   Hi, my name is <span className="name">Chris Norton</span>
                 </span>
-                <span className="intro-adj py-2">Industrious Dev</span>
+                <span
+                  className="intro-adj py-2"
+                  ref={el}
+                  style={{ minHeight: "80px" }}
+                >
+                  Industrious Dev
+                </span>
                 <span className="intro-subheading">
-                  Specialized in front end development
+                  Specialized in web development
                 </span>
                 <div className="d-flex flex-row justify-content-center mt-5">
-                  <button className="btn-hire">Hire Me</button>
-                  <button className="btn-cv">
+                  <a href="#contactme" className="btn-hire">
+                    Hire Me
+                  </a>
+                  <a
+                    className="btn-cv"
+                    href="https://1drv.ms/w/s!Ai7nODKIuWJOge8oUipewf3P4jHWAw?e=B7htQc"
+                    target="blank"
+                  >
                     <i class="ti-download" id="down"></i> CV
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -82,7 +129,7 @@ function App() {
           <br />
         </div>
 
-        <div className="about-me-section aboutme my-5">
+        <div className="about-me-section aboutme my-5" id="aboutme">
           <div className="d-flex flex-column">
             <span className="about-me-text revealUp"> About Me </span>
             <div className="row justify-content center shadow-lg my-5 about-me-pannel">
@@ -135,7 +182,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="resume-section-outer d-flex flex-column">
+        <div className="resume-section-outer d-flex flex-column" id="resume">
           <span className="about-me-text revealUp">Resume</span>
           <div
             className="resume-section row"
@@ -210,13 +257,13 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="testimonials-section my-5">
+        <div className="testimonials-section my-5" id="testimonials">
           <div className="testimonials-inner-part d-flex flex-column">
             <span className="about-me-text">Testimonials</span>
             <Testimonials />
           </div>
         </div>
-        <div className="contact-section py-4">
+        <div className="contact-section py-4" id="contactme">
           <div className="relative-bg"></div>
 
           <div className="contact-inner-part d-flex flex-column">

@@ -98,7 +98,7 @@ body {
 }
 .intro-adj {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
 }
 .intro-subheading {
   font-family: "Source Sans Pro", sans-serif;
@@ -135,9 +135,11 @@ body {
   transition: all 0.3s ease-in-out;
   animation: flicker 1.5s infinite alternate;
   color: white;
+  text-decoration: none;
 }
 .btn-hire:hover {
   color: #fff;
+  text-decoration: none;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   background-color: var(--third-app-color);

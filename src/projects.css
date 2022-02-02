@@ -6,3 +6,7 @@
 .card-wrapper {
   background-color: none;
 }
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
