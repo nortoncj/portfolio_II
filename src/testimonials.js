@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "./TestimonialsCard";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// import { gsap } from "gsap/all";
 
 export default function Testimonials() {
   return (
