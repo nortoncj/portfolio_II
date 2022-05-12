@@ -4,20 +4,36 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: whitesmoke;
+  padding-left: 15%;
 }
 .position {
+  font-family: "Source Sans Pro";
   font-size: 1rem;
   font-weight: 800;
-  color: #1c1c1c;
+  color: var(--standout-color);
   text-transform: uppercase;
   font-style: oblique;
+  padding-left: 15%;
 }
 .years {
+  padding-left: 15%;
   font-size: 1rem;
   padding: 10px 10px;
   text-decoration: none;
   color: whitesmoke;
+  padding-left: 15%;
 }
-.desc {
+.desc li {
   color: whitesmoke;
+  padding: 10px 10px;
+  padding-left: 20%;
+  display: flex;
+  list-style-type: none;
+}
+
+@media all and (max-width: 786px) {
+  .desc li {
+    justify-content: left;
+    padding: 0 3rem;
+  }
 }

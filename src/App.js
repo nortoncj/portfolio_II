@@ -11,24 +11,25 @@ import Education from "./Education";
 import Work from "./Work";
 import Code from "./Code";
 import Projects from "./Projects";
-import Testimonials from "./testimonials";
+import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 
 function App() {
   const [education, seteducation] = useState(false);
   const [work, setwork] = useState(false);
-  const [code, setcode] = useState(false);
-  const [projects, setprojects] = useState(true);
+  const [code, setcode] = useState(true);
+  const [projects, setprojects] = useState(false);
   const [opennav, setopennav] = useState(false);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Industrious Dev",
-        "Full Stack Developer",
-        "PHP Developer",
-        "React Developer",
-        ".NET Developer",
+        "Self-Driven",
+        "AWS",
+        "SEO",
+        "Adaptable",
+        "Team Player",
+        "Problem Solver",
       ],
       startDelay: 0,
       typeSpeed: 100,
@@ -68,32 +69,34 @@ function App() {
           {" "}
         </div>{" "}
       </div>
-      <div className="nav-hero">
+      <nav
+        className={
+          !opennav
+            ? "d-flex flex-rows  navbar-new bg-new px-9  transition-all"
+            : "d-flex flex-rows  navbar-fixed-new bg-new px-9 py-5 transition-all"
+        }
+      >
+        <span className="brand mx-5">Chris Norton</span>
+        <div className="d-flex flex-rows nav-web">
+          <a className="mx-4 nav-menu" href="#home">
+            Home
+          </a>
+          <a className="mx-4 nav-menu" href="#aboutme">
+            About Me
+          </a>
+          <a className="mx-4 nav-menu" href="#resume">
+            Resume
+          </a>
+          <a className="mx-4 nav-menu" href="#testimonials">
+            Testimonials
+          </a>
+          <a className="mx-4 nav-menu" href="#contactme">
+            Contact
+          </a>
+        </div>
+      </nav>
+      <div className="nav-hero" id="home">
         <div className="hero px-10 py-2">
-          <nav
-            className={
-              !opennav
-                ? "d-flex flex-rows  navbar-new bg-new px-9 py-5 transition-all"
-                : "d-flex flex-rows  navbar-fixed-new bg-new px-9 py-5 transition-all"
-            }
-          >
-            <span className="brand mx-5">Chris Norton</span>
-            <div className="d-flex flex-rows nav-web">
-              <span className="mx-4 nav-menu">Home</span>
-              <a className="mx-4 nav-menu" href="#aboutme">
-                About Me
-              </a>
-              <a className="mx-4 nav-menu" href="#resume">
-                Resume
-              </a>
-              <a className="mx-4 nav-menu" href="#testimonials">
-                Testimonials
-              </a>
-              <a className="mx-4 nav-menu" href="#contactme">
-                Contact
-              </a>
-            </div>
-          </nav>
           <div className="hero-2 row justify content-center">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="d-flex flex-column justify-content-center intro-section">
@@ -116,7 +119,7 @@ function App() {
                   </a>
                   <a
                     className="btn-cv"
-                    href="https://1drv.ms/w/s!Ai7nODKIuWJOge8oUipewf3P4jHWAw?e=B7htQc"
+                    href="https://docs.google.com/document/d/16Z1hdj_S8EZhvPj-cbbb61BxG5uMD7h_/edit?usp=sharing&ouid=118030389981850445474&rtpof=true&sd=true"
                     target="blank"
                   >
                     <i class="ti-download" id="down"></i> CV
@@ -184,28 +187,21 @@ function App() {
         </div>
         <div className="resume-section-outer d-flex flex-column" id="resume">
           <span className="about-me-text revealUp">Resume</span>
-          <div
-            className="resume-section row"
-            style={{ width: "70%", marginInline: "auto", height: "400px" }}
-          >
-            <div className="col-lg-4 col-md-4 resume-left d-flex flex-row px-0 shadow-lg">
-              <div className="d-flex flex-column bg-new text-white">
-                <div className="d-flex flex-column resume-icons">
-                  <span class="resume-icon">
-                    <i class="ti-github"></i>
-                  </span>
-                  <span class="resume-icon">
-                    <i class="ti-view-list"></i>
-                  </span>
-                  <span class="resume-icon">
-                    <i class="ti-blackboard"></i>
-                  </span>
-                  <span class="resume-icon">
-                    <i class="ti-user"></i>
-                  </span>
-                </div>
-              </div>
-              <div className="d-flex flex-column">
+          <div className="d-flex flex-rows">
+            <ul className="resume-menu d-flex flex-rows" id="resume-menu">
+              <li className="mx-4 nav-menu" href="#">
+                <span
+                  className={
+                    code === false ? "resume-menu" : "resume-menu selected"
+                  }
+                  onClick={() => {
+                    changeState(setcode, true);
+                  }}
+                >
+                  Skills
+                </span>
+              </li>
+              <li className="mx-4 nav-menu" href="#">
                 <span
                   className={
                     projects === false ? "resume-menu" : "resume-menu selected"
@@ -216,16 +212,9 @@ function App() {
                 >
                   Projects
                 </span>
-                <span
-                  className={
-                    code === false ? "resume-menu" : "resume-menu selected"
-                  }
-                  onClick={() => {
-                    changeState(setcode, true);
-                  }}
-                >
-                  Code
-                </span>
+              </li>
+
+              <li className="mx-4 nav-menu" href="#">
                 <span
                   className={
                     work === false ? "resume-menu" : "resume-menu selected"
@@ -236,6 +225,8 @@ function App() {
                 >
                   Work
                 </span>
+              </li>
+              <li className="mx-4 nav-menu" href="#">
                 <span
                   className={
                     education === false ? "resume-menu" : "resume-menu selected"
@@ -246,16 +237,13 @@ function App() {
                 >
                   Education
                 </span>
-              </div>
-            </div>
-
-            <div className="col-lg-8 col-md-8 col-sm-12 resume-right shadow-lg">
-              {education === true && <Education />}
-              {work === true && <Work />}
-              {code === true && <Code />}
-              {projects === true && <Projects />}
-            </div>
+              </li>
+            </ul>
           </div>
+          {education === true && <Education />}
+          {work === true && <Work />}
+          {code === true && <Code />}
+          {projects === true && <Projects />}
         </div>
         <div className="testimonials-section my-5" id="testimonials">
           <div className="testimonials-inner-part d-flex flex-column">

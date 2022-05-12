@@ -1,34 +1,31 @@
 import React from "react";
 import "./code.css";
+import Images from "./img/index.js";
 
 export default function Code() {
   return (
     <>
-      <div className="d-flex d-row ">
-        <div className="d-flex d-column col-lg-3 col-md-3 col-sm-4 category">
+      <div className="d-flex d-row justify-content-center ">
+        <div className="d-flex d-column col-lg-3 col-md-3 col-sm-4 category justify-content-center">
           <ul className="skill">
             <li>
               <img
                 className="code-badge"
-                src={require("./img/js.png")}
+                src={Images.js}
                 alt="Javascript"
               ></img>{" "}
               JavaScript
             </li>
             <li>
               {" "}
-              <img
-                className="code-badge"
-                src={require("./img/php.png")}
-                alt="PHP"
-              ></img>
+              <img className="code-badge" src={Images.php} alt="PHP"></img>
               PHP
             </li>
             <li>
               {" "}
               <img
                 className="code-badge"
-                src={require("./img/matlab.png")}
+                src={Images.matlab}
                 alt="MatLab"
               ></img>
               MatLab
@@ -37,26 +34,18 @@ export default function Code() {
               {" "}
               <img
                 className="code-badge"
-                src={require("./img/python.png")}
+                src={Images.python}
                 alt="Python"
               ></img>
               Python
             </li>
             <li>
               {" "}
-              <img
-                className="code-badge"
-                src={require("./img/java.png")}
-                alt="Java"
-              ></img>
+              <img className="code-badge" src={Images.java} alt="Java"></img>
               Java
             </li>
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/c-sharp.png")}
-                alt="C#"
-              ></img>
+              <img className="code-badge" src={Images.csharp} alt="C#"></img>
               C#
             </li>
           </ul>
@@ -64,17 +53,13 @@ export default function Code() {
         <div className="d-flex d-columnd-flex d-column col-lg-3 col-md-3 col-sm-4 category ">
           <ul className="skill">
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/react.png")}
-                alt="React"
-              ></img>
+              <img className="code-badge" src={Images.react} alt="React"></img>
               React
             </li>
             <li>
               <img
                 className="code-badge"
-                src={require("./img/laravel.png")}
+                src={Images.laravel}
                 alt="Laravel"
               ></img>
               Laravel
@@ -82,33 +67,25 @@ export default function Code() {
             <li>
               <img
                 className="code-badge"
-                src={require("./img/bootstrap.png")}
+                src={Images.bootstrap}
                 alt="Bootstrap"
               ></img>
-              Bootstrap, Bulma
+              Bootstrap
             </li>
             <li>
               <img
                 className="code-badge"
-                src={require("./img/dj.png")}
+                src={Images.django}
                 alt="Django"
               ></img>
               Django
             </li>
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/sass.png")}
-                alt="Sass"
-              ></img>
+              <img className="code-badge" src={Images.sass} alt="Sass"></img>
               Sass
             </li>
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/net.png")}
-                alt=".Net"
-              ></img>
+              <img className="code-badge" src={Images.net} alt=".Net"></img>
               ASP .NET
             </li>
           </ul>
@@ -116,51 +93,34 @@ export default function Code() {
         <div className="d-flex d-column d-flex d-column col-lg-3 col-md-3 col-sm-4 category">
           <ul className="skill">
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/node.png")}
-                alt="Node JS"
-              ></img>
+              <img className="code-badge" src={Images.node} alt="Node JS"></img>
               Node JS
             </li>
             <li>
               <img
                 className="code-badge"
-                src={require("./img/mongo.png")}
+                src={Images.mongo}
                 alt="Mongo DB"
               ></img>
               Mongo DB
             </li>
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/mysql.png")}
-                alt="MySQL"
-              ></img>
+              <img className="code-badge" src={Images.mysql} alt="MySQL"></img>
               MySQL
             </li>
             <li>
               <img
                 className="code-badge"
-                src={require("./img/jquery.png")}
+                src={Images.jquery}
                 alt="Jquery"
               ></img>
               Jquery
             </li>
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/c.png")}
-                alt="C"
-              ></img>
-              C
+              <img className="code-badge" src={Images.c} alt="C"></img>C
             </li>
             <li>
-              <img
-                className="code-badge"
-                src={require("./img/git.png")}
-                alt="Git"
-              ></img>
+              <img className="code-badge" src={Images.git} alt="Git"></img>
               Git
             </li>
           </ul>

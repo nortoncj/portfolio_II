@@ -29,7 +29,7 @@ export default function Work() {
           <span className="years">2019-2020</span>
         </div>
         <div className="d-flex flex-column">
-          <span className="position">Front End Developer</span>
+          <span className="position">Front End Consultant Developer</span>
           <span className="desc">
             <div>
               <ul>

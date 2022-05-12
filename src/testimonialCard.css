@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Orbitron&family=Source+Sans+Pro&display=swap");
+
+:root {
+  --primary-app-color: #850a80;
+  --secondary-app-color: #800f0e;
+  --third-app-color: #791332;
+  --standout-color: #f6f792;
+  --standout-color-2: #ea2e49;
+}
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  font-size: 50px;
+}
+.container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-card {
+  width: 250px;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -8px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  background: linear-gradient(
+    48deg,
+    rgba(133, 10, 128, 1) 0%,
+    rgba(234, 46, 73, 1) 100%
+  );
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-avi {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 30px;
+}
+.center {
+  padding: 10px;
+  border-radius: 10px;
+}
+.description {
+  color: whitesmoke;
+  font-family: "Source Sans Pro";
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.bottom {
+  display: row;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-name {
+  font-size: 1.5rem;
+  text-align: left;
+  font-style: oblique;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+.testimonial-title {
+  font-family: "orbitron";
+  font-style: oblique;
+  font-size: 1rem;
+}
+
+@media all and (max-width: 786px) {
+  .container {
+    flex-direction: row;
+    display: block;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .testimonial-card {
+    width: 80vw;
+    margin: 10px;
+  }
+}

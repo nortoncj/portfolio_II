@@ -1,19 +1,17 @@
 import React from "react";
 import "./css/card.css";
 
-export default function Card({ title, imageurl, body, link }) {
+export default function Card({ title, imageurl, link }) {
   return (
-    <>
-      <a href={link} target="_top" class="album-item">
-        <div className="card-container">
-          <div className="image-container">
-            <img src={imageurl} alt={title}></img>
-          </div>
-          <div className="card-title">{title}</div>
-
-          <div className="card-body">{body}</div>
+    <div className="card-container">
+      <a href={link}>
+        <div className="item">
+          <span className="project-item">
+            <img src={imageurl} alt={title} />
+          </span>
+          <h3>{title}</h3>
         </div>
       </a>
-    </>
+    </div>
   );
 }
