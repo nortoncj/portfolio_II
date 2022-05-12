@@ -122,7 +122,7 @@ function App() {
                     href="https://docs.google.com/document/d/16Z1hdj_S8EZhvPj-cbbb61BxG5uMD7h_/edit?usp=sharing&ouid=118030389981850445474&rtpof=true&sd=true"
                     target="blank"
                   >
-                    <i class="ti-download" id="down"></i> CV
+                    <i className="ti-download" id="down"></i> CV
                   </a>
                 </div>
               </div>
