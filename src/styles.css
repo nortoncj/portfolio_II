@@ -122,7 +122,6 @@ body {
   visibility: hidden;
 }
 .brand::after {
-  content: "";
   width: 150%;
   -webkit-box-shadow: -35px 0px 60px 8px rgba(255, 255, 255, 1);
   -moz-box-shadow: -35px 0px 60px 8px rgba(255, 255, 255, 1);
@@ -447,7 +446,6 @@ body {
     display: block;
     position: relative;
     bottom: 12px;
-    content: "";
     color: #fff;
     width: 40px;
     height: 4px;
