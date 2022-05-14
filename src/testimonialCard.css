@@ -90,7 +90,7 @@ h3 {
     font-size: 20px;
   }
   .testimonial-card {
-    width: 80vw;
-    margin: 10px;
+    width: 40vw;
+    /* margin: 2px; */
   }
 }

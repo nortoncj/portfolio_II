@@ -13,15 +13,8 @@
 * {
   padding: 0px;
   margin: 0px;
-  /* background: rgb(42, 1, 56);
-  background: linear-gradient(
-    90deg,
-    rgba(42, 1, 56, 1) 0%,
-    rgba(42, 25, 42, 1) 50%,
-    rgba(46, 1, 54, 1) 100%
-  ); */
-  /* color: white; */
 }
+
 body {
   background: rgb(214, 28, 28);
   background: linear-gradient(
@@ -33,7 +26,7 @@ body {
 }
 
 .avi {
-  width: 300px;
+  /* width: 300px; */
   border-radius: 50;
   display: flex;
   justify-content: center;
@@ -69,7 +62,7 @@ body {
   /* padding: 5px 40px; */
 
   z-index: 10000;
-  margin-bottom: -50px;
+  /* margin-bottom: -50px; */
   /* margin-top: 50px; */
   position: fixed;
 }
@@ -85,15 +78,14 @@ body {
   clip-path: polygon(100% 0, 100% 75%, 50% 100%, 50% 100%, 0 75%, 0% 0%);
   z-index: -1;
   /* position: relative; */
-  height: 40rem;
+  height: 60rem;
 }
-.hero-2 {
-  padding-top: 60px;
-}
+
 .intro-section {
-  /* padding-top: 20; */
+  padding-top: 20rem;
   text-align: center;
 }
+
 .I-am {
   font-family: "Dongle", sans-serif;
   font-weight: 700;
@@ -128,15 +120,17 @@ body {
   box-shadow: -35px 0px 60px 8px rgba(255, 255, 255, 1);
 }
 .px-10 {
-  padding-inline: 90px;
+  padding-inline: 9px;
 }
+/* padding 90 for hero section */
 .btn-hire {
   font-size: 1.3rem;
   font-family: "Orbitron", sans-serif;
   background: transparent;
   border-radius: 25px;
-  margin-inline: 12px;
-  padding: 5px 40px;
+  margin-inline: 2rem;
+  padding: 1rem 2rem;
+  margin: auto;
   border: 2px solid white;
   transition: all 0.3s ease-in-out;
   animation: flicker 1.5s infinite alternate;
@@ -156,13 +150,15 @@ body {
   font-family: "Source Sans Pro", monospace;
   background: transparent;
   border-radius: 25px;
-  margin-inline: 12px;
-  padding: 5px 40px;
+  margin-inline: 2rem;
+  padding: 1rem 2rem;
+  margin: auto;
   border: 2px solid white;
   transition: 0.3s ease-in-out;
   background: var(--third-app-color);
   transition: all 0.3s ease-in-out;
   color: white;
+  outline: none !important;
 }
 #down {
   text-decoration: none;
@@ -172,7 +168,12 @@ body {
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   transform: translateY(-5px);
+  outline: none !important;
+  text-decoration: none;
+  background: transparent;
+  color: white;
 }
+
 /* Animations */
 /* Flickering animation */
 @keyframes flicker {
@@ -239,6 +240,26 @@ body {
   }
 }
 
+@media all and (max-width: 786px) {
+  body {
+    width: 50vw;
+  }
+  .intro-section {
+    padding-top: 5rem;
+  }
+  .btn-hire {
+    width: 1vw;
+  }
+  .btn-cv {
+    width: 1vw;
+  }
+  .btn-text {
+    font-size: 1rem;
+    transform: translateX(-2rem);
+    margin-left: -1rem;
+  }
+}
+
 /* About Section */
 /* .about-me-section {
   visibility: hidden;
@@ -249,7 +270,7 @@ body {
   font-weight: 800;
   font-size: 3.5rem;
   font-style: oblique;
-  letter-spacing: 2px;
+  letter-spacing: 0.1rem;
   text-align: center;
 }
 .about-me-pannel {
@@ -259,7 +280,7 @@ body {
 }
 .about-me-section {
   font-family: "Source Sans Pro";
-  width: 70%;
+  width: 75%;
   margin-inline: auto;
 }
 .quote {
@@ -294,13 +315,39 @@ body {
   text-align: justify;
   font-style: oblique;
 }
+.graphic {
+  width: 31rem;
+  height: 31rem;
+}
+@media all and (max-width: 786px) {
+  .about-me-text {
+    font-size: 2.3rem;
+  }
+  .graphic {
+    width: 12rem;
+    height: 12rem;
+  }
+  .quote {
+    font-size: 0.4rem;
+  }
+  .about-txt {
+    font-size: 0.5rem;
+  }
+  .highlights {
+    font-size: 1.3rem;
+  }
+  #skills {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
 /* Resume Styles */
 /* .resume-section-outer {
   visibility: hidden;
 } */
 
 .resume-menu {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   cursor: pointer;
   font-family: "Source Sans Pro";
   list-style-type: none;
@@ -309,10 +356,10 @@ body {
   align-items: center;
   padding: none;
   text-align: center;
-  margin: 2rem 6rem;
+  margin: 1rem 0.1rem;
 }
 .resume-menu > li {
-  padding: 10px;
+  padding: 0 2px 0 2px;
   text-align: center;
   text-decoration: none;
   justify-content: center;
@@ -332,6 +379,33 @@ body {
 .table {
   display: table;
   margin: auto;
+}
+
+@media all and (max-width: 786px) {
+  body {
+    width: 50vw;
+  }
+  .resume-section-outer {
+    height: 40rem;
+  }
+  .resume-menu {
+    font-size: 0.3rem;
+    width: 1vw;
+    display: table-row;
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .resume-menu > li {
+    padding: 0 0 0 0;
+    margin: none;
+  }
+}
+
+/* Testimonials */
+@media all and (max-width: 786px) {
+  .about-me-testimonial {
+    font-size: 1.5rem;
+  }
 }
 
 /* Contact */
@@ -371,8 +445,11 @@ body {
 
 /* moboile view */
 @media all and (max-width: 786px) {
+  * {
+    /* max-width: 50vw; */
+  }
   .navbar-mobile {
-    width: 100vw;
+    width: fit-content;
     height: 45px;
     position: fixed;
     display: block;
@@ -385,8 +462,8 @@ body {
     z-index: 44;
     color: whitesmoke;
     padding: 0 10px;
-
-    /* translate: translateY(-700px); */
+    margin-left: 8rem;
+    justify-content: right;
   }
   .flex-rows {
     flex-direction: column;
@@ -428,28 +505,30 @@ body {
     height: 4px;
     width: 40px;
     background: #fff;
+    color: #fff;
     float: right;
     z-index: 33;
-    transform: translateY(30px);
+    transform: translateY(25px);
   }
   .bars::before {
     display: block;
     position: relative;
-    top: 9px;
     content: "";
     color: #fff;
     width: 40px;
     height: 4px;
     background: #fff;
+    bottom: 7px;
   }
   .bars::after {
     display: block;
     position: relative;
-    bottom: 12px;
+    content: "";
     color: #fff;
     width: 40px;
     height: 4px;
     background: #fff;
+    bottom: -3px;
   }
   .skills {
     font-size: 1em;

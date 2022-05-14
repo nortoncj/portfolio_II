@@ -70,4 +70,7 @@ a {
     height: 8rem;
     margin-top: 50px;
   }
+  .card-container {
+    margin-left: 30px;
+  }
 }

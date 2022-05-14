@@ -22,14 +22,14 @@
 
 @media all and (max-width: 786px) {
   .school {
-    padding-left: 4rem;
+    padding-left: 0.3rem;
     font-size: 3vh;
   }
   .degree {
-    padding-left: 8rem;
+    padding-left: 0.2rem;
     font-size: 2vh;
   }
   .year {
-    padding: 0 8rem;
+    padding: 0 0.5rem;
   }
 }

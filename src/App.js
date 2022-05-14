@@ -108,21 +108,26 @@ function App() {
                   ref={el}
                   style={{ minHeight: "80px" }}
                 >
-                  Industrious Dev
+                  Industrious
                 </span>
                 <span className="intro-subheading">
                   Specialized in web development
                 </span>
                 <div className="d-flex flex-row justify-content-center mt-5">
                   <a href="#contactme" className="btn-hire">
-                    Hire Me
+                    <span className="btn-text">
+                      Hire <span className="btn-text">Me</span>
+                    </span>
                   </a>
                   <a
                     className="btn-cv"
                     href="https://docs.google.com/document/d/16Z1hdj_S8EZhvPj-cbbb61BxG5uMD7h_/edit?usp=sharing&ouid=118030389981850445474&rtpof=true&sd=true"
                     target="blank"
                   >
-                    <i className="ti-download" id="down"></i> CV
+                    <span className="btn-text">
+                      <i className="ti-download" id="down"></i>
+                      CV
+                    </span>
                   </a>
                 </div>
               </div>
@@ -137,14 +142,16 @@ function App() {
             <span className="about-me-text revealUp"> About Me </span>
             <div className="row justify-content center shadow-lg my-5 about-me-pannel">
               <div className="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-center d-flex flex-column">
-                <lottie-player
-                  src="https://assets6.lottiefiles.com/packages/lf20_esw9ibjj.json"
-                  background="transparent"
-                  speed="1"
-                  style={{ width: "500px", height: "500px" }}
-                  loop
-                  autoplay
-                ></lottie-player>
+                <span className="graphic">
+                  <lottie-player
+                    src="https://assets6.lottiefiles.com/packages/lf20_esw9ibjj.json"
+                    background="transparent"
+                    className=""
+                    speed="1"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </span>
                 <span className="quote">
                   "Desire! That's the one secret of every man's career. Not
                   education. Not being born with hidden talents. Desire" -
@@ -163,7 +170,7 @@ function App() {
                   look at my experiences can be seen in my <span>resume</span>
                 </span>
                 <span className="highlights">Skills</span>
-                <div className="skills row">
+                <div className="skills row" id="skills">
                   <div className=" col-sm-4">
                     <ul>
                       <li>JS ES6+, Node, React</li>
@@ -210,7 +217,7 @@ function App() {
                     changeState(setprojects, true);
                   }}
                 >
-                  Projects
+                  Sites
                 </span>
               </li>
 
@@ -247,7 +254,9 @@ function App() {
         </div>
         <div className="testimonials-section my-5" id="testimonials">
           <div className="testimonials-inner-part d-flex flex-column">
-            <span className="about-me-text">Testimonials</span>
+            <span className="about-me-text about-me-testimonial">
+              Testimonials
+            </span>
             <Testimonials />
           </div>
         </div>
